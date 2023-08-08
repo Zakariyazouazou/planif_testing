@@ -1,0 +1,21 @@
+// //My Structure file 
+// pages/
+// ├── index.js // corresponds to the "/" route
+// ├── about.js // corresponds to the "/about" route
+// ├── cart.js // corresponds to the "/cart" route
+// ├── dashboard.js // corresponds to the "/dashboard" route
+// ├── editprofile.js // corresponds to the "/editprofile" route
+// ├── emailverification.js // corresponds to the "/emailverification" route
+// ├── faq.js // corresponds to the "/faq" route
+// ├── home.js // corresponds to the "/home" route
+// ├── login.js // corresponds to the "/login" route
+// ├── mainDash/
+// │   ├── index.js // corresponds to the "/mainDash" route
+// │   ├── myprofile.js // corresponds to the "/mainDash/myprofile" route
+// │   └── editprofile.js // corresponds to the "/mainDash/editprofile" route
+// ├── services.js // corresponds to the "/services" route
+// ├── signup.js // corresponds to the "/signup" route
+// └── workSection.js // corresponds to the "/workSection" route
+
+// utils/
+// └── withAuth.js // Higher Order Component (HOC) for protecting routes

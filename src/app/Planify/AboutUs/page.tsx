@@ -2,6 +2,7 @@
 import React from 'react';
 import dynamic from "next/dynamic";
 import Loading from '../../Component/Loading';
+
 const OverIntro = dynamic(
   () => import('../../Sections/index').then((mod) => mod.OverIntro),
   { loading: () => <Loading/> }
@@ -27,7 +28,7 @@ interface Props {
    className?: string;
 }
 
-const Alpha: React.FC<Props> = ({className}:Props) => {
+const Alpha: React.FC<Props> = ({className}) => {
   return (
     <div className={className}>
            <OverIntro className='w-[90%] ml-[5%] permax:w-full permax:ml-0 my-10 '/>

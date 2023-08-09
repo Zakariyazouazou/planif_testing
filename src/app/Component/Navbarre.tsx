@@ -42,9 +42,13 @@ const NavbarreLinks: NavLink[] = [
 ]
 
 const Navbarre: React.FC<Props> = ({ }: Props) => {
-   const [screenSize, setScreenSize] = React.useState<number>(window.innerWidth);
+   const [screenSize, setScreenSize] = React.useState<number>(0);
 
-
+   React.useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setScreenSize(window.innerWidth);
+      }
+    }, []);
    // Function to handle window resize events and update the screen size state
    const handleResize = () => {
       setScreenSize(window.innerWidth);

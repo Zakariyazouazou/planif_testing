@@ -25,7 +25,13 @@ const HomeReview = dynamic(
 );
 
 export default function Home() {
-  const [screenSize, setScreenSize] = React.useState<Number>(window.innerWidth);
+  const [screenSize, setScreenSize] = React.useState<Number>(0);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setScreenSize(window.innerWidth);
+    }
+  }, []);
 
   React.useEffect(() => {
     const CheckScreenSize = () => {

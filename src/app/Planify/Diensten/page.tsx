@@ -22,7 +22,7 @@ const DiensenServices = dynamic(
   { loading: () => <Loading/> ,  ssr: false }
 );
 interface Props {
-
+ 
 }
 
 const page: React.FC<Props> = (props) => {

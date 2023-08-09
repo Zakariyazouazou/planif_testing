@@ -42,7 +42,7 @@ interface SocialMediaLinks {
     },
     {
        LinkName: "Over Ons",
-       LinkAddress: "/Planify/AboutUs"
+       LinkAddress: "/Planify/About"
     },
     {
        LinkName: "Diensten",

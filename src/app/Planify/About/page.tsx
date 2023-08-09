@@ -24,12 +24,11 @@ const OverServices = dynamic(
 
 
 interface Props {
-   className?: string;
 }
 
-const page: React.FC<Props> = ({className}:Props) => {
+const page: React.FC<Props> = (props) => {
   return (
-    <div className={className}>
+    <div>
            <OverIntro className='w-[90%] ml-[5%] permax:w-full permax:ml-0 my-10 '/>
            <OverServices className='w-[90%] ml-[5%] permax:w-full permax:ml-0 my-10 mt-28 '/>
            <OverOffers className='w-[90%] ml-[5%] permax:w-full permax:ml-0 my-10 mt-28 '/>

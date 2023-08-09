@@ -4,22 +4,22 @@ import dynamic from 'next/dynamic';
 import Loading from '../../Component/Loading';
 const DiensenIntro = dynamic(
   () => import('../../Sections/index').then((mod) => mod.DiensenIntro),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/> ,  ssr: false }
 );
 
 const DiensenReview = dynamic(
   () => import('../../Sections/index').then((mod) => mod.DiensenReview),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/> ,  ssr: false }
 );
 
 const DiensenOther = dynamic(
   () => import('../../Sections/index').then((mod) => mod.DiensenOther),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/> ,  ssr: false }
 );
 
 const DiensenServices = dynamic(
   () => import('../../Sections/index').then((mod) => mod.DiensenServices),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/> ,  ssr: false }
 );
 interface Props {
 

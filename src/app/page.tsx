@@ -5,23 +5,23 @@ import Loading from "./Component/Loading";
 //Import All Sections
 const HomeIntro = dynamic(
   () => import("./Sections").then((mod) => mod.HomeIntro),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 const HomeOffer = dynamic(
   () => import("./Sections").then((mod) => mod.HomeOffer),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 const HomePrises = dynamic(
   () => import("./Sections").then((mod) => mod.HomePrises),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 const HomeInter = dynamic(
   () => import("./Sections").then((mod) => mod.HomeInter),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 const HomeReview = dynamic(
   () => import("./Sections").then((mod) => mod.HomeReview),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 
 export default function Home() {

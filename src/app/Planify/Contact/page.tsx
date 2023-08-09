@@ -4,12 +4,12 @@ import dynamic from 'next/dynamic';
 import Loading from '../../Component/Loading';
 const ContactMethode = dynamic(
   () => import('../../Sections/index').then((mod) => mod.ContactMethode),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>, ssr: false }
 );
 
 const ContactQuestion = dynamic(
   () => import('../../Sections/index').then((mod) => mod.ContactQuestion),
-  { loading: () => <Loading/> }
+  { loading: () => <Loading/>  , ssr: false}
 );
 
 

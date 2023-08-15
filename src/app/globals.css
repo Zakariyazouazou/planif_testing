@@ -28,7 +28,23 @@
 .backgroundtest4{
   background-color: yellow;
 }
-
+/* block selectio */
+*{
+  -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+input,
+textarea, 
+button,
+select,
+a{
+  -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+*:active,
+*:focus
+*:visited {
+  outline: none;
+}
+/*  */
 
 
 /* //scroll barre  */

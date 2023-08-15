@@ -94,7 +94,7 @@ const Navbarre: React.FC<Props> = ({ }: Props) => {
                <div className='flex  justify-around items-center  w-[60%] '>
                   {
                      NavbarreLinks.map((item, index) => (
-                        <Link key={index} href={item.LinkAddress} className={`testBautton text-[#FF0086] hover:text-[#ff0088e1] pb-2 
+                        <Link key={index+'link'} href={item.LinkAddress} className={`testBautton text-[#FF0086] hover:text-[#ff0088e1] pb-2 
                         ${pathname === item.LinkAddress ? "text-[35px] permax3:text-[30px] font-bold  border-b-[1px] border-[#FF0086] " : " text-[27px] permax3:text-[23px]   cursor-pointer  "} `}>
                            {item.LinkName}
                         </Link>
@@ -116,20 +116,19 @@ const Navbarre: React.FC<Props> = ({ }: Props) => {
                      <BiMenu className="text-4xl  transition-all transform ease-in-out duration-300" />
                   </h1>
                </div>
-               <div className='ModePhone flex justify-center items-center'>
+               <div className='ModePhone '>
                   <h1 className='fixed right-0 top-0 cursor-pointer bg-[#FF0086]  m-4 rounded-full p-1'  onClick={RemoveMenuButton}>
                      <AiOutlineClose className="text-3xl text-white transition-all transform ease-in-out duration-300" />
                   </h1>
-                  <div className='w-[70%] text-center  telphone:w-full'>
-                     <Image src={Logo} alt='logoPlanify' className='w-[70%] ml-[15%]' loading="lazy" />
-
+                  <Image src={Logo} alt='logoPlanify' className='w-[40%] m-4' loading="lazy" />
+                  <div className='w-full mt-16 text-center  telphone:w-full'>
                      {
                         NavbarreLinks.map((element, index) => {
                            return (
-                              <Reveal className="w-full text-center">
+                              <Reveal key={'el'+index} className="w-full text-center">
                                  <MagneticButton key={index + 20} LinkTo={element.LinkAddress}
                                     onClick={RemoveMenuButton}
-                                    className='text-white  text-5xl font-bold m-4 permaxMedium:m-0 permaxMedium:my-4 zfolder:text-2xl 
+                                    className='text-white  text-3xl font-bold m-4 permaxMedium:m-0 permaxMedium:my-4 zfolder:text-xl 
                                   zfolder:my-0 '
                                  >
                                     {element.LinkName}
@@ -139,8 +138,8 @@ const Navbarre: React.FC<Props> = ({ }: Props) => {
                         })
                      }
                      <br />
-                     <Reveal className="w-full text-center">
-                        <MagneticButton LinkTo='/' className='bg-[#FFDAED]  text-[#FF0086]'>
+                     <Reveal className="w-full text-center telphone:mt-[40px] zfolder:mt-[70px] flex justify-center">
+                        <MagneticButton LinkTo='/' className='bg-[#FFDAED]  telphone:h-[20px] flex items-center justify-center text-[#FF0086]'>
                            Login
                         </MagneticButton>
                      </Reveal>

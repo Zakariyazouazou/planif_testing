@@ -86,14 +86,14 @@ const HomeIntro: React.FC<Props> = ({ className }: Props) => {
                     <div
                       className={`bounceInBottom`}
                       style={{ animationDelay: `${index * 200}ms` }}
-                      key={index + "f"}
+                      key={index +"f"}
                     >
                       {item.card.map((element, index) => {
                         const h: number = element.height;
                         const colors: string = element.color.toString();
                         return (
                           <div
-                            key={index + "z"} // Adding a unique key for each rendered element
+                            key={index +"z"} // Adding a unique key for each rendered element
                             className={`w-[216px] permaxMaxAlphaMax:w-[190px]  permaxMaxAlphaMax:m-[1px] px-1 pt-1 rounded-xl elementjump `}
                             style={{
                               height: screenSize > 1086 ? h : 230,
